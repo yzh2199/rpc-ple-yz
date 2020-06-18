@@ -1,0 +1,32 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.yz.rpc.autoconfig.RPCProperties",
+      "name": "rpc",
+      "type": "com.yz.rpc.autoconfig.RPCProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.yz.rpc.autoconfig.RPCProperties",
+      "name": "rpc.application-config",
+      "type": "com.yz.rpc.config.ApplicationConfig"
+    },
+    {
+      "sourceType": "com.yz.rpc.autoconfig.RPCProperties",
+      "name": "rpc.cluster-config",
+      "type": "com.yz.rpc.config.ClusterConfig"
+    },
+    {
+      "sourceType": "com.yz.rpc.autoconfig.RPCProperties",
+      "name": "rpc.protocol-config",
+      "type": "com.yz.rpc.config.ProtocolConfig"
+    },
+    {
+      "sourceType": "com.yz.rpc.autoconfig.RPCProperties",
+      "name": "rpc.registry-config",
+      "type": "com.yz.rpc.config.RegistryConfig"
+    }
+  ]
+}
