@@ -19,7 +19,7 @@ public class SyncCallService {
     private SimpleRPCService rpcService;    //远程服务的本地代理
 
     public void syncCallTest(){
-        String result = rpcService.helloRPC(new User("pengqidalao"));
+        String result = rpcService.helloRPC(new User("yzhyzh"));
         log.info("同步调用结果:{}",result);
     }
 }

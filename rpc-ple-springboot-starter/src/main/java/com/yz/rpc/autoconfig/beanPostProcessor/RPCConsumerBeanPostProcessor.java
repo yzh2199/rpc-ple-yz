@@ -12,8 +12,8 @@ import java.lang.reflect.Field;
 /**
  * RPC客户端后置处理器,用于创建ReferenceConfig实例
  *
- * @author pengqi
- * create at 2019/7/4
+ * @author yz
+ * create at 2020/4/4
  */
 @Slf4j
 public class RPCConsumerBeanPostProcessor extends AbstractBeanPostProcessor{

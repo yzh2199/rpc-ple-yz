@@ -22,7 +22,7 @@ public class AsyncCallService {
     private SimpleRPCService service;
 
     public void asyncCall() throws Exception{
-        service.helloRPC(new User("zll"));
+        service.helloRPC(new User("211"));
         Future<String> future = RPCThreadLocalContext.getContext().getFuture();
         log.info("异步调用结果:{}",future.get());
     }
