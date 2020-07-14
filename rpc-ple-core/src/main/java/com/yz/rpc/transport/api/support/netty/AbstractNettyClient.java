@@ -224,10 +224,11 @@ public abstract class AbstractNettyClient extends AbstractClient {
      */
     @Override
     public void handleCallbackRequest(RPCRequest request, ChannelHandlerContext ctx) {
+        //这里之前出现了错误，从服务端返回的request请求的就是回调方法，所以request的interface域存的就是回调方法的类
+        //之前存在HANDLER_MAP中的回调方法实例的键是通过requestid和回调方法类型生成的，这里也应该这样组建
+        //而不是通过referenceconfig组建
         ServiceConfig serviceConfig = RPCThreadSharedContext.getAndRemoveHandler(
-                CallbackInvocation.generateCallbackHandlerKey(request,
-                        ReferenceConfig.getReferenceConfigByInterfaceName(request.getInterfaceName()))
-        );
+                CallbackInvocation.generateCallbackHandlerKey(request));
         //将回调任务提交给线程池处理
         getGlobalConfig().getClientExecutor().submit(new RPCTaskRunner(ctx,request,serviceConfig));
     }

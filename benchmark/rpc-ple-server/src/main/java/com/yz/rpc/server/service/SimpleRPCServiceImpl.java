@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @author yz
  * create at 2020/4/5
  */
-@RPCService(interfaceClass = SimpleRPCService.class)
+//@RPCService(interfaceClass = SimpleRPCService.class)
 public class SimpleRPCServiceImpl implements SimpleRPCService {
     @Override
     public String helloRPC(User user) {

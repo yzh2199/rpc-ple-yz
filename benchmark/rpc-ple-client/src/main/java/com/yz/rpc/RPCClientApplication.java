@@ -1,6 +1,7 @@
 package com.yz.rpc;
 
 import com.yz.rpc.client.call.AsyncCallService;
+import com.yz.rpc.client.call.CallbackService;
 import com.yz.rpc.client.call.SyncCallService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -20,6 +21,9 @@ public class RPCClientApplication implements CommandLineRunner {
     @Autowired
     private AsyncCallService asyncCallService;
 
+    @Autowired
+    private CallbackService callbackService;
+
     public static void main( String[] args )
     {
         SpringApplication app = new SpringApplication(RPCClientApplication.class);
@@ -29,6 +33,8 @@ public class RPCClientApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        asyncCallService.asyncCall();
+//        syncCallService.syncCallTest();
+//        asyncCallService.asyncCall();
+        callbackService.callBackTest();
     }
 }

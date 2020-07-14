@@ -18,7 +18,7 @@ import java.util.concurrent.Future;
 @Component
 @Slf4j
 public class AsyncCallService {
-    @RPCReference(async = true)
+//    @RPCReference(async = true)
     private SimpleRPCService service;
 
     public void asyncCall() throws Exception{

@@ -16,9 +16,19 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class SyncCallService {
 
+//    @RPCReference
     private SimpleRPCService rpcService;    //远程服务的本地代理
 
+//    public class SimpleRPCServiceImpl implements SimpleRPCService {
+//        @Override
+//        public String helloRPC(User user) {
+//
+//            return "remote_call success!";
+//        }
+//    }
+
     public void syncCallTest(){
+//        rpcService = new SimpleRPCServiceImpl();
         String result = rpcService.helloRPC(new User("yzhyzh"));
         log.info("同步调用结果:{}",result);
     }
